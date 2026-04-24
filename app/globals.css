@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-outfit), sans-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid #E8620A;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .hero-bg {
+    background-image:
+      radial-gradient(circle at 70% 50%, rgba(232,98,10,0.08) 0%, transparent 60%),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(255,255,255,0.015) 40px,
+        rgba(255,255,255,0.015) 41px
+      );
+  }
+
+  .cta-bg {
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(232,98,10,0.10) 0%, transparent 60%),
+      radial-gradient(circle at 80% 50%, rgba(232,98,10,0.06) 0%, transparent 50%);
+  }
+
+  .accent-bar {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      #E8620A 30%,
+      #E8620A 70%,
+      transparent
+    );
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
