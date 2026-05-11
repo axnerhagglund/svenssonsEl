@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" role="img" aria-labelledby="title">
+  <title id="title">Svensson El</title>
+  <rect width="160" height="40" rx="8" fill="#1B2A3B" />
+  <text x="16" y="26" fill="#F5F2EC" font-family="Arial, sans-serif" font-size="18" font-weight="700">
+    Svensson <tspan fill="#C9941A">El</tspan>
+  </text>
+</svg>
