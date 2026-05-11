@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #1B2A3B;
+  --color-dark-2: #243547;
+  --color-accent: #C9941A;
+  --color-accent-h: #B4821A;
+  --color-accent-dark: #E0A820;
+  --color-accent-light: #9A6E10;
+  --color-bg: #F5F2EC;
+  --color-muted: #6B7A8D;
+  --color-border: #E2DDD6;
+
+  --font-head: var(--font-fraunces);
+  --font-body: var(--font-outfit);
+
+  --max-width-content: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-outfit), sans-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid #C9941A;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .hero-bg {
+    background-image:
+      radial-gradient(circle at 70% 50%, rgba(201,148,26,0.08) 0%, transparent 60%),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(255,255,255,0.015) 40px,
+        rgba(255,255,255,0.015) 41px
+      );
+  }
+
+  .cta-bg {
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(201,148,26,0.10) 0%, transparent 60%),
+      radial-gradient(circle at 80% 50%, rgba(201,148,26,0.06) 0%, transparent 50%);
+  }
+
+  .accent-bar {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      #C9941A 30%,
+      #C9941A 70%,
+      transparent
+    );
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
